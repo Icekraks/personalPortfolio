@@ -1,9 +1,14 @@
 import { makeAutoObservable } from 'mobx';
 
 class mainStore{
-    userDetails=null;
-    setUserDetails(details){
-        this.userDetails = details;
+    userName="";
+
+    setUserName(details){
+        this.userName = details;
+    }
+
+    appendUserName(detail){
+        this.userName = this.userName+detail;
     }
 
     constructor() {

@@ -1,6 +1,34 @@
-.homeDiv{
-  background-color: #073642;
-  .textBlock{
+
+.homeBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .textBlock {
+    font-size: 60px;
     color: #859900;
+
   }
+  .fadeOut{
+    transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+    font-size: 60px;
+    color: #859900;
+    opacity:0;
+  }
+}
+#cursor {
+  background: #073642;
+  box-sizing: border-box;
+  border-left: .5em solid;
+  -webkit-animation: typing 3s steps(19, end),blinking 1s step-end infinite;
+  animation: typing 3s steps(19, end),blinking 1s step-end infinite;
+
+}
+
+@keyframes blinking {
+  0% {border-color: transparent;}
+  100% {border-color: transparent;}
+  50% {border-color: #859900;}
 }
