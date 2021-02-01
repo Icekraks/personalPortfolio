@@ -5,19 +5,91 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .decodeButton{
+    width: 100px;
+    height: 50px;
+
+  }
+  .navigationH1{
+    margin-top: 0;
+    color: #859900;
+
+  }
+  .navigationH1:hover{
+    margin-top: 0;
+    cursor: pointer;
+    color: #b58900;
+  }
 
   .textBlock {
+    display: flex;
     font-size: 60px;
     color: #859900;
 
   }
   .fadeOut{
-    transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+    display: none;
+    transition: width 2s 2s, height 2s 2s, opacity 2s;
     font-size: 60px;
     color: #859900;
     opacity:0;
   }
+  .mainElements{
+    display: flex;
+    transition: width 2s 2s, height 2s 2s, opacity 2s;
+    color: #859900;
+    opacity: 100;
+    flex-direction: column;
+    width: 90vw;
+    height: 90vh;
+  }
+  .mainElementsHidden{
+    display: flex;
+    opacity: 0;
+  }
+  .mainQuadrant{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+  }
+  .mainRow{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 20px;
+  }
+
+  .statButton{
+    font-family: "Ubuntu Light", source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    background: #eee8d5;
+    font-size: 16px;
+    color: #073642;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+  }
+  .statButton:hover{
+    font-family: "Ubuntu Light", source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    background: #eee8d5;
+    font-size: 16px;
+    color: #b58900;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+  }
+
+  .youtubeEmbed{
+    height: 100%;
+  }
 }
+
+/*
+  Animation for transitions.
+ */
 #cursor {
   background: #073642;
   box-sizing: border-box;
@@ -25,6 +97,18 @@
   -webkit-animation: typing 3s steps(19, end),blinking 1s step-end infinite;
   animation: typing 3s steps(19, end),blinking 1s step-end infinite;
 
+}
+
+#slide {
+  position: absolute;
+  left: -100px;
+  width: 100px;
+  height: 100px;
+  background: blue;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
 }
 
 @keyframes blinking {

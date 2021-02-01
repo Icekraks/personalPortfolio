@@ -4,7 +4,7 @@ import {history} from './history';
 import storeInstance from "./mainStore";
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {Router, Switch, Route, Redirect} from 'react-router-dom'
+import {Router, Route, Redirect} from 'react-router-dom'
 import Home from './pages/HomePage/Home';
 
 const storeContext = React.createContext(null);
