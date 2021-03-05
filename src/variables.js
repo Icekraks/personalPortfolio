@@ -1,5 +1,4 @@
-
-const felixData = {
+export const felixData = {
 	name: 'Felix Hu',
 	amITitle: 'whoami',
 	amIString: 'dunno what to write',
@@ -9,4 +8,27 @@ const felixData = {
 
 
 }
-export default felixData;
+
+export const rsTable = [
+	{
+		name: 'Name',
+		selector: 'variable',
+		sortable: true,
+		minWidth: '12em'
+	},
+	{
+		name: 'Name2',
+		selector: 'variable',
+		sortable: true,
+		minWidth: '12em'
+	},
+	{
+		name: 'Name3',
+		selector: 'variable',
+		sortable: true,
+		minWidth: '12em'
+	}
+]
+
+
+

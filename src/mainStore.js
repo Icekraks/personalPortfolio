@@ -8,6 +8,10 @@ class mainStore{
     title3 = '';
     title4 = '';
     paragraph1 = '';
+    osrsUsername = 'IcekraksIG';
+    name = "Felix Hu";
+    tableStats = { };
+    pageName = 'Home'
 
     setUserName(details){
         this.userName = details;
@@ -37,6 +41,14 @@ class mainStore{
         this.paragraph1 = details;
     }
 
+    setOsrsUsername(name){
+        this.osrsUsername = name;
+    }
+
+    setTableStats(stats){
+        this.tableStats = stats;
+    }
+
 
     appendTitle(slot,details){
         switch(slot){
@@ -63,6 +75,10 @@ class mainStore{
 
     appendUserName(detail){
         this.userName = this.userName+detail;
+    }
+
+    setPageName(page){
+        this.pageName = page;
     }
 
     constructor() {
