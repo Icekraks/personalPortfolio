@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
 
   .decodeButton{
     width: 100px;
@@ -16,6 +15,7 @@
   .navigationH1{
     margin-top: 0;
     color: #859900;
+
 
   }
   .navigationH1:hover{
@@ -29,6 +29,11 @@
     font-size: 60px;
     color: #859900;
 
+  }
+  .paragraphBlock{
+    margin: 50px 50px 50px;
+    color: #859900;
+    font-size: 20px;
   }
   .fadeOut{
     display: none;
@@ -47,7 +52,7 @@
     height: 90vh;
   }
   .mainElementsHidden{
-    display: flex;
+    display: none;
     opacity: 0;
   }
   .mainQuadrant{

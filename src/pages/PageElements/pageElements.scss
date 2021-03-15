@@ -12,8 +12,49 @@
     flex: 1;
     padding: 20px;
   }
+  .auxTitle{
+    text-align: center;
+    color: #b58900;
+    font-size: 2em;
+    font-weight: bolder;
+    cursor:default;
+  }
+  .auxNavigation{
+    padding-top: 20px;
+  }
+  .auxButton{
+    display: flex;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #859900;
+    border-radius: 50px;
+  }
+  .auxButton:hover{
+    display: flex;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #b58900;
+    border-radius: 50px;
+  }
+  .paragraphBlock{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 50px 150px 50px;
+    color: #859900;
+  }
+  .paragraph{
+    padding: 0 20px 0;
+    font-size: 20px;
+  }
+  .videoDiv{
+    height: 560px;
+  }
   .navigationH1{
-    margin-top: 0;
+    padding: 0;
+    margin: 0;
     color: #859900;
 
   }
@@ -21,5 +62,11 @@
     margin-top: 0;
     cursor: pointer;
     color: #b58900;
+  }
+
+}
+@media only screen and (max-width: 600px) {
+  .auxBody {
+    margin: 20px 30px 20px;
   }
 }

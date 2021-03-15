@@ -9,11 +9,15 @@ const GithubPage = observer(class GithubPage extends Component {
 	render() {
 		return (
 			<div className='auxBody'>
-				<div className={'auxPage'}>
-					<h1 onClick={() => mainStore.setPageName('Home')} className={'navigationH1'}><span>{"> "}</span>Back
-					</h1>
-					Github
+				<div className={'auxNavigation'}>
+					<div className={'auxButton'}>
+					<h1 onClick={() => mainStore.setPageName('Home')} className={'navigationH1'}><span>{"> "}</span>Back</h1>
+					</div>
 				</div>
+				<div className={'auxPage'}>
+					<div className={'auxTitle'}>Github</div>
+				</div>
+
 			</div>
 		)
 	}
