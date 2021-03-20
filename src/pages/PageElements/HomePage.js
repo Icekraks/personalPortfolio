@@ -95,6 +95,7 @@ const HomePage = observer(class HomePage extends Component {
 		this.setState({loaded:true})
 	}
 
+
 	render(){
 		const { visible,loaded } = this.state;
 

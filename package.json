@@ -1,5 +1,6 @@
 {
   "name": "portfolioproject",
+  "homepage": "http://Icekraks.github.io/personalPortfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +8,7 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
     "axios": "^0.21.1",
+    "gh-pages": "^3.1.0",
     "mobx-react": "^7.0.5",
     "node-sass": "4.14.1",
     "osrs-api": "^0.1.2",
@@ -19,6 +21,8 @@
     "yarn": "^1.22.10"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
