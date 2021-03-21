@@ -1,10 +1,14 @@
+Body{
+  display: flex;
+  flex: 1;
+}
 .App {
   text-align: center;
 }
 .BodyElement{
-  min-height: 100vh;
   display: flex;
   flex: 1;
   flex-direction: row;
   background-color: #073642;
+  overflow-y: auto;
 }
