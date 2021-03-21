@@ -65,6 +65,21 @@
     cursor: pointer;
     color: #b58900;
   }
+  @media only screen and (max-width: 600px) {
+    .paragraphBlock{
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      margin: 50px 25px 50px;
+      color: #859900;
+    }
+    .auxPage {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 10px;
+    }
+  }
 
 }
 @media only screen and (max-width: 600px) {

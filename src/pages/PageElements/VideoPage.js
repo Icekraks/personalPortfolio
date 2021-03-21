@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { observer } from 'mobx-react';
 import './pageElements.scss'
 import mainStore from "../../mainStore";
-import { Button, Input } from "reactstrap";
 
 
 const VideoPage = observer(class VideoPage extends Component {
