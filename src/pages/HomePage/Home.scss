@@ -12,12 +12,7 @@
     height: 50px;
 
   }
-  .navigationH1{
-    margin-top: 0;
-    color: #859900;
 
-
-  }
   .navigationH1:hover{
     margin-top: 0;
     cursor: pointer;
@@ -30,11 +25,7 @@
     color: #859900;
 
   }
-  .paragraphBlock{
-    margin: 50px 50px 50px;
-    color: #859900;
-    font-size: 20px;
-  }
+
   .fadeOut{
     display: none;
     transition: width 2s 2s, height 2s 2s, opacity 2s;
@@ -50,24 +41,64 @@
     flex-direction: column;
     width: 90vw;
     height: 90vh;
+
+    .mainRow{
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      padding: 20px;
+
+      .mainQuadrant{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+
+        .titleButton{
+          display: flex;
+          width: fit-content;
+          height: 40px;
+          padding: 7px 22px 7px;
+          margin: 0 0 20px;
+          align-items: center;
+          justify-content: center;
+
+
+          .navigationH1{
+            margin: 0;
+            color: #859900;
+          }
+        }
+        .titleButton:hover{
+          padding: 5px 20px 5px;
+          border-radius: 50px;
+          border: 2px solid #b58900;
+          .navigationH1:hover{
+            color: #b58900;
+          }
+        }
+        .paragraphBlock{
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          margin: 10px 50px 20px;
+          color: #859900;
+          font-size: 20px;
+
+        }
+        .paragraph{
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+        }
+      }
+
+
+    }
   }
   .mainElementsHidden{
     display: none;
     opacity: 0;
   }
-  .mainQuadrant{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 10px;
-  }
-  .mainRow{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    padding: 20px;
-  }
-
 
   .buttonDiv{
     padding-bottom: 20px;

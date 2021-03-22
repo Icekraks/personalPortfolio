@@ -13,8 +13,8 @@ const HomePage = observer(class HomePage extends Component {
 		super(props);
 		this.state = {
 			visible: true,
-			loaded:false,
-			pageName:'Home',
+			loaded: false,
+			pageName: 'Home',
 		}
 	}
 
@@ -69,8 +69,8 @@ const HomePage = observer(class HomePage extends Component {
 		// mainStore.setTableStats({})
 	}
 
-	swapPage = (title)=>{
-		switch(title) {
+	swapPage = (title) => {
+		switch (title) {
 			case 1:
 				mainStore.setPageName('AboutMe');
 				break;
@@ -78,7 +78,7 @@ const HomePage = observer(class HomePage extends Component {
 				mainStore.setPageName('Video');
 				break;
 			case 3:
-				mainStore.setPageName('Github');
+			 	window.open('https://github.com/Icekraks', '_blank');
 				break;
 			case 4:
 				console.log('runescape');
@@ -92,24 +92,24 @@ const HomePage = observer(class HomePage extends Component {
 	async componentDidMount() {
 		setTimeout(this.displayName, 3000, mainStore.name);
 		console.log(mainStore.osrsStats);
-		this.setState({loaded:true})
+		this.setState({ loaded: true })
 	}
 
 
-	render(){
-		const { visible,loaded } = this.state;
+	render() {
+		const { visible, loaded } = this.state;
 
-		if(!loaded){
+		if (!loaded) {
 			return null;
 		}
 		let continueClick = window.document;
 		continueClick.addEventListener('click', this.closeName);
-		return(
+		return (
 			<div className='homeBody'>
 				<div>
 					<span id='textBlock'
-					  className={visible ? 'textBlock' : 'fadeOut'}><span>{">"}</span> {mainStore.userName}
-					<div style={{ padding: '5px', display: 'inline' }}>
+						  className={visible ? 'textBlock' : 'fadeOut'}><span>{">"}</span> {mainStore.userName}
+						<div style={{ padding: '5px', display: 'inline' }}>
 						<div id="cursor" style={{ display: 'inline' }}>
 						</div>
 					</div>
@@ -118,37 +118,46 @@ const HomePage = observer(class HomePage extends Component {
 				<div className={visible ? 'mainElementsHidden' : 'mainElements'}>
 					<div className={'mainRow'}>
 						<div className={'mainQuadrant'}>
-							<h1 onClick={()=>this.swapPage(1)} className={'navigationH1'}><span>{"> "}</span>{mainStore.title1}</h1>
+							<div onClick={() => this.swapPage(1)} className={'titleButton'}>
+								<h1 className={'navigationH1'}><span>{"> "}</span>{mainStore.title1}</h1>
+							</div>
 							<div className={'paragraphBlock'}>
 								<p className={'paragraph'}>
-									I am a 23 year old male that graduated from the University of Sydney with a <b>Bachelor of Computer Science</b> in 2019.
+									I am a 23 year old male that graduated from the University of Sydney with a <b>Bachelor
+									of Computer Science</b> in 2019.
 								</p>
-								<p className={'paragraph'}>I spent a year working in 2020 during Covid working at a company called <b>Leigo Industries</b> where most of the time was spent developing
+								<p className={'paragraph'}>I spent a year working in 2020 during Covid working at a
+									company called <b>Leigo Industries</b> where most of the time was spent developing
 									my skills using ReactJS and MobX working on client projects and internal projects.
 								</p>
 								<p className={'paragraph'}>
-									I have since left the company due to financial issues but the year spent has taught me how to build user interfaces, websites and admin panels.
+									I have since left the company due to financial issues but the year spent has taught
+									me how to build user interfaces, websites and admin panels.
 								</p>
 								<p className={'paragraph'}>
 									My other hobbies include building Computers, Videography, Photography and Cars.
 								</p>
 							</div>
 						</div>
-						<div className={'mainQuadrant'}>
-							<h1 onClick={()=>this.swapPage(4)} className={'navigationH1'}><span>{"> "}</span>{mainStore.title2}</h1>
-							<Input placeholder={'Oldschool Runescape Username'} value={mainStore.osrsUsername}
-								   onChange={(e) => mainStore.setOsrsUsername(e.target.value)}/>
-							<div className={'buttonDiv'}>
-								<Button className={'statButton'} onClick={() => this.displayStats()}>Show Stats</Button>
-							</div>
-							<DataTable columns={rsTable} data={mainStore.tableStats}
-									   noDataComponent={<p>There Are No Stats to Display</p>}/>
+						{/*<div className={'mainQuadrant'}>*/}
+						{/*	<h1 onClick={()=>this.swapPage(4)} className={'navigationH1'}><span>{"> "}</span>{mainStore.title2}</h1>*/}
+						{/*	<Input placeholder={'Oldschool Runescape Username'} value={mainStore.osrsUsername}*/}
+						{/*		   onChange={(e) => mainStore.setOsrsUsername(e.target.value)}/>*/}
+						{/*	<div className={'buttonDiv'}>*/}
+						{/*		<Button className={'statButton'} onClick={() => this.displayStats()}>Show Stats</Button>*/}
+						{/*	</div>*/}
+						{/*	<DataTable columns={rsTable} data={mainStore.tableStats}*/}
+						{/*			   noDataComponent={<p>There Are No Stats to Display</p>}/>*/}
 
-						</div>
+						{/*</div>*/}
 					</div>
 					<div className={'mainRow'}>
 						<div className={'mainQuadrant'}>
-							<h1 onClick={()=>this.swapPage(2)} className={'navigationH1'}><span>{"> "}</span>{mainStore.title3}</h1>
+							<div onClick={() => this.swapPage(2)} className={'titleButton'}>
+								<h1 onClick={() => this.swapPage(2)} className={'navigationH1'}>
+									<span>{"> "}</span>{mainStore.title3}</h1>
+							</div>
+							<div className={'paragraphBlock'}>
 							<div className={'youtubeEmbed'}>
 								<iframe title={'showreelvideo'} id={'showreel'} width="100%" height="100%"
 										src="https://www.youtube.com/embed/IZEM1jpcEhY"
@@ -156,9 +165,20 @@ const HomePage = observer(class HomePage extends Component {
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 										allowFullScreen/>
 							</div>
+							</div>
 						</div>
 						<div className={'mainQuadrant'}>
-							<h1 onClick={()=>this.swapPage(3)} className={'navigationH1'}><span>{"> "}</span>{mainStore.title4}</h1>
+							<div onClick={() => this.swapPage(3)} className={'titleButton'}>
+								<h1 onClick={() => this.swapPage(3)} className={'navigationH1'}>
+									<span>{"> "}</span>{mainStore.title4}</h1>
+							</div>
+							<div className={'paragraphBlock'}>
+								<p className={'paragraph'}>
+									My Github is where all my projects are hosted including this portfolio
+									if you want to have a look. It varies from uni work to personal projects or tools,
+									that I have used.
+								</p>
+							</div>
 						</div>
 					</div>
 

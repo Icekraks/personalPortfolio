@@ -5,6 +5,10 @@ import mainStore from "../../mainStore";
 
 
 const VideoPage = observer(class VideoPage extends Component {
+	openYoutube = () =>{
+		window.open('https://www.youtube.com/channel/UCWx3bqTrPhhx6XmRFt1hR2w','_blank');
+
+	}
 	render() {
 		return (
 			<div className='auxBody'>
@@ -15,6 +19,12 @@ const VideoPage = observer(class VideoPage extends Component {
 				</div>
 				<div className={'auxPage'}>
 					<div className={'auxTitle'}>Videography</div>
+					<div className={'secondaryNav'}>
+						<div className={'auxButton'}>
+							<h1 onClick={() => this.openYoutube} className={'navigationH1'}><span>{"> "}</span>Link to Youtube Channel</h1>
+						</div>
+					</div>
+
 					<div className={'paragraphBlock'}>
 						<div className={'videoDiv'}>
 							<iframe title={'showreelvideo'} id={'showreel'} width="100%" height="100%"

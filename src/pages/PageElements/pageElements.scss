@@ -21,22 +21,71 @@
   }
   .auxNavigation{
     padding-top: 20px;
+    .auxButton{
+      display: flex;
+      width: fit-content;
+      height: 40px;
+      padding: 5px 20px 5px;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #859900;
+      border-radius: 50px;
+
+      .navigationH1{
+        padding: 0;
+        margin: 0;
+        color: #859900;
+
+      }
+    }
+    .auxButton:hover{
+      border: 2px solid #b58900;
+      border-radius: 50px;
+
+      .navigationH1:hover{
+        margin-top: 0;
+        cursor: pointer;
+        color: #b58900;
+      }
+    }
+
+
   }
-  .auxButton{
+
+  .secondaryNav{
     display: flex;
-    width: 150px;
-    align-items: center;
     justify-content: center;
-    border: 2px solid #859900;
-    border-radius: 50px;
-  }
-  .auxButton:hover{
-    display: flex;
-    width: 150px;
     align-items: center;
-    justify-content: center;
-    border: 2px solid #b58900;
-    border-radius: 50px;
+    margin: 20px 40px 0px;
+    .auxButton{
+      display: flex;
+      width: fit-content;
+      height: 40px;
+      padding: 7px 22px 7px;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+
+      .navigationH1{
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        color: #859900;
+
+      }
+    }
+    .auxButton:hover{
+      padding: 5px 20px 5px;
+      border-radius: 50px;
+      border: 2px solid #b58900;
+
+      .navigationH1:hover{
+        margin-top: 0;
+        cursor: pointer;
+        color: #b58900;
+      }
+    }
   }
   .paragraphBlock{
     display: flex;
@@ -46,7 +95,8 @@
     color: #859900;
   }
   .paragraph{
-    padding: 0 20px 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-size: 20px;
   }
   .videoDiv{
@@ -54,17 +104,7 @@
     flex: 1;
     height: 560px;
   }
-  .navigationH1{
-    padding: 0;
-    margin: 0;
-    color: #859900;
 
-  }
-  .navigationH1:hover{
-    margin-top: 0;
-    cursor: pointer;
-    color: #b58900;
-  }
   @media only screen and (max-width: 600px) {
     .paragraphBlock{
       display: flex;
