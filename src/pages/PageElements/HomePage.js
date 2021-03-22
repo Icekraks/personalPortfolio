@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import '../HomePage/Home.scss';
 import mainStore from "../../mainStore";
 import { felixData, rsTable } from '../../variables'
+import { getStats} from "../../api";
 import { hiscores } from 'osrs-json-api';
 import { Button, Input } from "reactstrap";
 import DataTable from "react-data-table-component";
@@ -61,13 +62,6 @@ const HomePage = observer(class HomePage extends Component {
 		});
 
 	}
-	displayStats = async () => {
-		console.log(mainStore.osrsUsername);
-		let stats = await hiscores.getPlayer('IcekraksIG'
-		);
-		console.log(stats);
-		// mainStore.setTableStats({})
-	}
 
 	swapPage = (title) => {
 		switch (title) {
@@ -90,18 +84,19 @@ const HomePage = observer(class HomePage extends Component {
 
 
 	async componentDidMount() {
-		setTimeout(this.displayName, 3000, mainStore.name);
-		console.log(mainStore.osrsStats);
-		this.setState({ loaded: true })
+		let data = getStats('IcekraksIG');
+		this.setState({ loaded: true, data: data })
 	}
 
 
 	render() {
-		const { visible, loaded } = this.state;
+		const { visible, loaded, data } = this.state;
+
 
 		if (!loaded) {
 			return null;
 		}
+
 		let continueClick = window.document;
 		continueClick.addEventListener('click', this.closeName);
 		return (
