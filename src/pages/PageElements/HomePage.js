@@ -96,7 +96,7 @@ const HomePage = observer(class HomePage extends Component {
 		if (!loaded) {
 			return null;
 		}
-
+		console.log(data);
 		let continueClick = window.document;
 		continueClick.addEventListener('click', this.closeName);
 		return (

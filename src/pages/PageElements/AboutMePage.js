@@ -2,33 +2,13 @@ import React, { Component } from 'react'
 import { observer } from 'mobx-react';
 import './pageElements.scss'
 import mainStore from "../../mainStore";
-import { getStats } from "../../api";
 
 const AboutMePage = observer(class AboutMePage extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			loaded: false,
-		}
-	}
-
-	async componentDidMount() {
-		let data = getStats('IcekraksIG');
-		this.setState({ loaded: true, data: data })
-	}
 	render() {
-		const { loaded, data } = this.state;
-
-		if (!loaded) {
-			return null;
-		}
-
-		console.log(data);
 		return (
 			<div className='auxBody'>
 				<div className={'auxNavigation'}>
 					<div className={'auxButton'}>
-						hi
 						<h1 onClick={() => mainStore.setPageName('Home')} className={'navigationH1'}><span>{"> "}</span>Back</h1>
 					</div>
 				</div>
