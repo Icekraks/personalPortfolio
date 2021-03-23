@@ -3,7 +3,7 @@ import storeInstance from './mainStore';
 
 
 
-export const API_BASE_URL = 'http://services.runescape.com/m=hiscore_oldschool/index_lite.ws?player=',
+export const API_BASE_URL = 'https://services.runescape.com/m=hiscore_oldschool/index_lite.ws?player=',
 	debug = process.env.REACT_APP_DEBUG === 'true';
 
 const callApi = async (path, method, body) => {
