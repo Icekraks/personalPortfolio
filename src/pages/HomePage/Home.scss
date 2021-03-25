@@ -94,6 +94,24 @@
 
 
     }
+    @media only screen and (max-width: 600px) {
+      .mainRow{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px;
+        .mainQuadrant {
+          .paragraphBlock {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            margin: 10px 20px 10px;
+            color: #859900;
+            font-size: 20px;
+          }
+        }
+      }
+    }
   }
   .mainElementsHidden{
     display: none;
@@ -127,14 +145,7 @@
     height: 100%;
   }
 
-  @media only screen and (max-width: 600px) {
-    .mainRow{
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      padding: 20px;
-    }
-  }
+
 }
 
 /*
