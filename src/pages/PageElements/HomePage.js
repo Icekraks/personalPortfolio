@@ -3,8 +3,6 @@ import { observer } from 'mobx-react';
 import '../HomePage/Home.scss';
 import mainStore from "../../mainStore";
 import { felixData, rsTable } from '../../variables'
-import { getStats} from "../../api";
-import { hiscores } from 'osrs-json-api';
 import { Button, Input } from "reactstrap";
 import DataTable from "react-data-table-component";
 
@@ -84,19 +82,18 @@ const HomePage = observer(class HomePage extends Component {
 
 
 	async componentDidMount() {
-		let data = getStats('IcekraksIG');
-		this.setState({ loaded: true, data: data })
+		// let data = getStats('IcekraksIG');
+		this.setState({ loaded: true })
 	}
 
 
 	render() {
-		const { visible, loaded, data } = this.state;
+		const { visible, loaded } = this.state;
 
 
 		if (!loaded) {
 			return null;
 		}
-		console.log(data);
 		let continueClick = window.document;
 		continueClick.addEventListener('click', this.closeName);
 		return (

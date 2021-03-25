@@ -9,8 +9,9 @@ export const API_BASE_URL = 'https://services.runescape.com/m=hiscore_oldschool/
 const callApi = async (path, method, body) => {
 	let options = {
 		method,
+		mode: 'cors',
 		headers: {
-			'app-version': 'web',
+			'Content-Type': 'application/json'
 		}
 	};
 	if (method.toLowerCase() !== 'get') {
