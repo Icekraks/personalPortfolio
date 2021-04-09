@@ -84,6 +84,7 @@ const HomePage = observer(class HomePage extends Component {
 	async componentDidMount() {
 		// let data = getStats('IcekraksIG');
 		this.setState({ loaded: true })
+		this.displayName('Felix Hu')
 	}
 
 

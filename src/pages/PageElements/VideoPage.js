@@ -31,20 +31,40 @@ const VideoPage = observer(class VideoPage extends Component {
 			overlay: state,
 			location: loc
 		})
+		if(state) {
+			document.getElementById('overlay').style.display = 'flex';
+			document.getElementById('videoBody').style.display = 'none';
+		} else {
+			document.getElementById('overlay').style.display='none';
+			document.getElementById('videoBody').style.display='flex';
+		}
 	}
 
 	render() {
-		const { overlay,location } = this.state;
+		const { location } = this.state;
 		return (
 			<div className='auxBody'>
 
-				{overlay?(<div className={'Overlay'}>
-						<span>{location}</span>
-						<div className={'auxButton'}>
-							<h1 onClick={() => this.overlayState(false,'')} className={'navigationH1'}><span>{"> "}</span>Close</h1>
+				<div id={'overlay'} className={'overlay'}>
+
+					<div className={'overlayNavigation'}>
+						<div className={'overlayButton'}>
+							<h1 onClick={() => this.overlayState(false,'')} className={'overlayH1'}><span>{"> "}</span>Close</h1>
 						</div>
-				</div>)
-				:(<div>
+					</div>
+					<div className={'overlayPage'}>
+						<div className={'auxTitle videoTitle'}>{location.location}</div>
+						<div className={'videoDivOverlay'}>
+							<iframe title={'showreelvideo'} id={'showreel'} width="100%" height="100%"
+									src={location.link}
+									frameBorder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowFullScreen/>
+						</div>
+					</div>
+				</div>
+
+				<div id={'videoBody'} className={'auxChild'}>
 					<div className={'auxNavigation'}>
 						<div className={'auxButton'}>
 							<h1 onClick={() => mainStore.setPageName('Home')} className={'navigationH1'}>
@@ -64,24 +84,25 @@ const VideoPage = observer(class VideoPage extends Component {
 
 
 						<div className={'paragraphBlock'}>
-							<div className={'videoDiv'}>
+							<div className={'mapDiv'}>
 								<Map
 									style="mapbox://styles/mapbox/light-v9"
-									center={[151.2055832, -33.8780926]}
+									center={[151.0833132666856,-33.90518137171744]}
 									containerStyle={{
 										height: '100%',
-										width: '90%'
+										width: '100%'
 									}}
 									zoom={[10.5]}
 								>
 									<Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
 										{
 											coordinateTable.map((e) => (
-												<Feature onClick={() => this.overlayState(true,e.location)}
+												<Feature onClick={() => this.overlayState(true,e)}
 														 coordinates={e.coordinate}/>
 											))}
 									</Layer>
 								</Map>
+								<span style={{paddingTop:'10px'}}>Click Map Markers to See Individual Videos.</span>
 							</div>
 							<div className={'videoDiv'}>
 								<iframe title={'showreelvideo'} id={'showreel'} width="100%" height="100%"
@@ -90,24 +111,9 @@ const VideoPage = observer(class VideoPage extends Component {
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 										allowFullScreen/>
 							</div>
-							<div className={'videoDiv'}>
-								<iframe title={'showreelvideo'} id={'showreel'} width="100%" height="100%"
-										src="https://www.youtube.com/embed/zkXsZZUtjCs"
-										frameBorder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowFullScreen/>
-							</div>
-							<div className={'videoDiv'}>
-								<iframe title={'showreelvideo'} id={'showreel'} width="100%" height="100%"
-										src="https://www.youtube.com/embed/jDH-Pn58TYU"
-										frameBorder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowFullScreen/>
-							</div>
-
 						</div>
 					</div>
-				</div>)}
+				</div>
 
 			</div>
 		)
