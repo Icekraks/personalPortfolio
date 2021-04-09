@@ -22,6 +22,13 @@
     margin: 50px 5vw 50px;
     color: #859900;
   }
+  .paragraphBlockText {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 50px 5vw 50px;
+    color: #859900;
+  }
 
   .paragraph {
     margin-top: 0.5em;
@@ -211,6 +218,9 @@
       .auxPage{
         padding: 0;
         .paragraphBlock{
+          margin: 0;
+        }
+        .paragraphBlockText{
           margin: 0;
         }
       }
