@@ -9,7 +9,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 const Map = ReactMapboxGl({
 	accessToken:
-		'pk.eyJ1IjoiaWNla3Jha3MiLCJhIjoiY2tuNDhic3U5MW93ejJubnp1OW92NmVkOCJ9.IIcLN4Ah-LS9yFuTX4y1VA'
+		'pk.eyJ1IjoiaWNla3Jha3MiLCJhIjoiY2tudGlva21kMDJ4MDJ3bHBjM2x3aHdpZSJ9._RkuRsMPu3s2flVuYh63Ug'
 });
 
 const VideoPage = observer(class VideoPage extends Component {
