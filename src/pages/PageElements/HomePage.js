@@ -5,6 +5,7 @@ import mainStore from "../../mainStore";
 import { felixData, rsTable } from '../../variables'
 import { Button, Input } from "reactstrap";
 import DataTable from "react-data-table-component";
+import { Terminal, ChevronRight } from "react-feather";
 
 
 const HomePage = observer(class HomePage extends Component {
@@ -99,20 +100,27 @@ const HomePage = observer(class HomePage extends Component {
 		continueClick.addEventListener('click', this.closeName);
 		return (
 			<div className='homeBody'>
-				<div>
-					<span id='textBlock'
-						  className={visible ? 'textBlock' : 'fadeOut'}><span>{">"}</span> {mainStore.userName}
-						<div style={{ padding: '5px', display: 'inline' }}>
-						<div id="cursor" style={{ display: 'inline' }}>
-						</div>
+				{visible ? null :
+					<div className={'ee'}>
+						<Terminal className={'terminalIcon'}/>
 					</div>
+				}
+				<div>
+
+					<span id='textBlock'
+						  className={visible ? 'textBlock' : 'fadeOut'}>
+						<ChevronRight className={ 'chevronRight, titleChevron'}/>
+						{mainStore.userName}
+						<div style={{ padding: '5px', display: 'inline' }}>
+							<div id="cursor" style={{ display: 'inline' }}/>
+						</div>
 					</span>
 				</div>
 				<div className={visible ? 'mainElementsHidden' : 'mainElements'}>
 					<div className={'mainRow'}>
 						<div className={'mainQuadrant'}>
 							<div onClick={() => this.swapPage(1)} className={'titleButton'}>
-								<h1 className={'navigationH1'}><span>{"> "}</span>{mainStore.title1}</h1>
+								<h1 className={'navigationH1'}><ChevronRight className={ 'chevronRight'}/>{mainStore.title1}</h1>
 							</div>
 							<div className={'paragraphBlock'}>
 								<p className={'paragraph'}>
@@ -148,7 +156,7 @@ const HomePage = observer(class HomePage extends Component {
 						<div className={'mainQuadrant'}>
 							<div onClick={() => this.swapPage(2)} className={'titleButton'}>
 								<h1 onClick={() => this.swapPage(2)} className={'navigationH1'}>
-									<span>{"> "}</span>{mainStore.title3}</h1>
+									<ChevronRight className={ 'chevronRight'}/>{mainStore.title3}</h1>
 							</div>
 							<div className={'paragraphBlock'}>
 							<div className={'youtubeEmbed'}>
@@ -163,7 +171,7 @@ const HomePage = observer(class HomePage extends Component {
 						<div className={'mainQuadrant'}>
 							<div onClick={() => this.swapPage(3)} className={'titleButton'}>
 								<h1 onClick={() => this.swapPage(3)} className={'navigationH1'}>
-									<span>{"> "}</span>{mainStore.title4}</h1>
+									<ChevronRight className={ 'chevronRight'}/>{mainStore.title4}</h1>
 							</div>
 							<div className={'paragraphBlock'}>
 								<p className={'paragraph'}>

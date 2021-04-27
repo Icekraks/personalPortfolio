@@ -4,12 +4,14 @@ import './pageElements.scss'
 import mainStore from "../../mainStore";
 import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
 import { coordinateTable } from "../../variables";
+import { ArrowLeftCircle,ArrowRightCircle } from "react-feather";
+
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 
 const Map = ReactMapboxGl({
 	accessToken:
-		'pk.eyJ1IjoiaWNla3Jha3MiLCJhIjoiY2tudGlva21kMDJ4MDJ3bHBjM2x3aHdpZSJ9._RkuRsMPu3s2flVuYh63Ug'
+		'pk.eyJ1IjoiaWNla3Jha3MiLCJhIjoiY2tuNDhic3U5MW93ejJubnp1OW92NmVkOCJ9.IIcLN4Ah-LS9yFuTX4y1VA'
 });
 
 const VideoPage = observer(class VideoPage extends Component {
@@ -49,7 +51,7 @@ const VideoPage = observer(class VideoPage extends Component {
 
 					<div className={'overlayNavigation'}>
 						<div className={'overlayButton'}>
-							<h1 onClick={() => this.overlayState(false,'')} className={'overlayH1'}><span>{"> "}</span>Close</h1>
+							<h1 onClick={() => this.overlayState(false,'')} className={'overlayH1'}><ArrowLeftCircle className={'ArrowCircle'}/>Close</h1>
 						</div>
 					</div>
 					<div className={'overlayPage'}>
@@ -68,7 +70,7 @@ const VideoPage = observer(class VideoPage extends Component {
 					<div className={'auxNavigation'}>
 						<div className={'auxButton'}>
 							<h1 onClick={() => mainStore.setPageName('Home')} className={'navigationH1'}>
-								<span>{"> "}</span>Back
+								<ArrowLeftCircle className={'ArrowCircle'}/>Back
 							</h1>
 						</div>
 					</div>
@@ -76,7 +78,7 @@ const VideoPage = observer(class VideoPage extends Component {
 						<div className={'auxTitle'}>Videography</div>
 						<div className={'secondaryNav'}>
 							<div className={'auxButton'}>
-								<h1 onClick={() => this.openYoutube} className={'navigationH1'}><span>{"> "}</span>Link
+								<h1 onClick={() => this.openYoutube} className={'navigationH1'}><ArrowRightCircle className={'ArrowCircle'}/>Link
 									to
 									Youtube Channel</h1>
 							</div>
@@ -85,16 +87,17 @@ const VideoPage = observer(class VideoPage extends Component {
 
 						<div className={'paragraphBlock'}>
 							<div className={'mapDiv'}>
+
 								<Map
-									style="mapbox://styles/mapbox/light-v9"
-									center={[151.0833132666856,-33.90518137171744]}
+									style="mapbox://styles/mapbox/dark-v10"
+									center={[151.0732534,-33.8712938]}
 									containerStyle={{
 										height: '100%',
 										width: '100%'
 									}}
 									zoom={[10.5]}
 								>
-									<Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
+									<Layer type="symbol" id="marker" layout={{ 'icon-image': 'attraction-15' }}>
 										{
 											coordinateTable.map((e) => (
 												<Feature onClick={() => this.overlayState(true,e)}

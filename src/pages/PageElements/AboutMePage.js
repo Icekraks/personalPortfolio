@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { observer } from 'mobx-react';
 import './pageElements.scss'
 import mainStore from "../../mainStore";
+import { ArrowLeftCircle } from "react-feather";
 
 const AboutMePage = observer(class AboutMePage extends Component {
 	render() {
@@ -11,7 +12,7 @@ const AboutMePage = observer(class AboutMePage extends Component {
 					<div className={'auxNavigation'}>
 						<div className={'auxButton'}>
 							<h1 onClick={() => mainStore.setPageName('Home')} className={'navigationH1'}>
-								<span>{"> "}</span>Back</h1>
+								<ArrowLeftCircle className={'ArrowCircle'}/>Back</h1>
 						</div>
 					</div>
 					<div className={'auxPage'}>

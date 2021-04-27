@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react';
-import './Home.scss';
+import '../../App.css';
 import mainStore from "../../mainStore";
 import Pages from "../PageElements/Pages";
+import { Terminal } from "react-feather";
 
 
 
