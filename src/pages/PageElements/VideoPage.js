@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react';
-import './pageElements.scss'
+import './pageElements.scss';
+
 import mainStore from "../../mainStore";
 import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
+import mapboxgl from 'mapbox-gl';
 import { coordinateTable } from "../../variables";
 import { ArrowLeftCircle,ArrowRightCircle } from "react-feather";
 
+
 import 'mapbox-gl/dist/mapbox-gl.css';
 
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const Map = ReactMapboxGl({
 	accessToken:
