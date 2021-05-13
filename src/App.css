@@ -8,7 +8,6 @@ Body{
 .BodyElement{
   display: flex;
   flex: 1;
-  flex-direction: column;
   background-color: #073642;
   overflow-y: auto;
   width: 100%;

@@ -34,7 +34,7 @@ export const coordinateTable = [
 	{
 		location: 'Harbour Bridge',
 		coordinate: [151.2107644753664, -33.85215800198618],
-		link: ''
+		link: 'https://www.youtube.com/embed/6R_Q0iVVBdw'
 	},
 	{
 		location: 'Anzac Bridge',
@@ -44,7 +44,7 @@ export const coordinateTable = [
 	{
 		location: 'Wynyard',
 		coordinate: [151.20243845156062, -33.86582387037274],
-		link: ''
+		link: 'https://www.youtube.com/embed/4y3ILAQreLM'
 	},
 	{
 		location: 'Eastern Creek',
@@ -62,6 +62,11 @@ export const coordinateTable = [
 		link: 'https://www.youtube.com/embed/hWG3xzNh69Y'
 	},
 	{
+		location: 'Sydney Showground',
+		coordinate: [151.0682804,-33.8458129],
+		link: 'https://www.youtube.com/watch?v=3Zuptqsdguc'
+	},
+	{
 		location: 'Vaucluse',
 		coordinate: [151.28379642825044, -33.86107034383786],
 		link: 'https://www.youtube.com/embed/ExlJvwbFmps'
@@ -70,7 +75,12 @@ export const coordinateTable = [
 		location: 'Rydalmere',
 		coordinate: [151.0351039148289, -33.80970329227861],
 		link: 'https://www.youtube.com/embed/vb2PPgwEBcA'
-	}
+	},
+	{
+		location: 'University of Sydney',
+		coordinate: [151.1950529,-33.8884706],
+		link:'https://www.youtube.com/embed/zkXsZZUtjCs'
+	},
 ]
 
 
