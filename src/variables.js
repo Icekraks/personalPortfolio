@@ -64,7 +64,8 @@ export const coordinateTable = [
 	{
 		location: 'Sydney Showground',
 		coordinate: [151.0682804,-33.8458129],
-		link: 'https://www.youtube.com/watch?v=3Zuptqsdguc'
+		link: 'https://www.youtube.com/embed/3Zuptqsdguc'
+
 	},
 	{
 		location: 'Vaucluse',

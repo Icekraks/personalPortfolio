@@ -25,11 +25,7 @@ const AboutMePage = observer(class AboutMePage extends Component {
 							<p className={'paragraph'}>I spent a year working in 2020 during COVID working at a company
 								called <b>Leigo Industries</b> where most of the time was spent developing
 								my skills using <b>ReactJS and MobX</b> working on client projects and internal
-								projects.
-							</p>
-							<p className={'paragraph'}>
-								I have since left the company due to financial issues but 2020 has taught me how to
-								build user interfaces, websites and admin panels.
+								projects, building user interfaces, websites and admin panels.
 							</p>
 							<p className={'paragraph'}>
 								I have also other skills besides the Javascript/ReactJS/MobX, in Java and C++ as those

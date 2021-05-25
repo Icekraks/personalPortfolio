@@ -132,10 +132,6 @@ const HomePage = observer(class HomePage extends Component {
 									my skills using ReactJS and MobX working on client projects and internal projects.
 								</p>
 								<p className={'paragraph'}>
-									I have since left the company due to financial issues but the year spent has taught
-									me how to build user interfaces, websites and admin panels.
-								</p>
-								<p className={'paragraph'}>
 									My other hobbies include building Computers, Videography, Photography and Cars.
 								</p>
 							</div>
