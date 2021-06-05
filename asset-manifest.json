@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/personalPortfolio/static/css/main.0f4ad25e.chunk.css",
+    "main.css": "/personalPortfolio/static/css/main.99e17aac.chunk.css",
     "main.js": "/personalPortfolio/static/js/main.1acb9979.chunk.js",
     "main.js.map": "/personalPortfolio/static/js/main.1acb9979.chunk.js.map",
     "runtime-main.js": "/personalPortfolio/static/js/runtime-main.29847bab.js",
@@ -12,7 +12,7 @@
     "static/js/3.6c377008.chunk.js.map": "/personalPortfolio/static/js/3.6c377008.chunk.js.map",
     "index.html": "/personalPortfolio/index.html",
     "static/css/2.5facb513.chunk.css.map": "/personalPortfolio/static/css/2.5facb513.chunk.css.map",
-    "static/css/main.0f4ad25e.chunk.css.map": "/personalPortfolio/static/css/main.0f4ad25e.chunk.css.map",
+    "static/css/main.99e17aac.chunk.css.map": "/personalPortfolio/static/css/main.99e17aac.chunk.css.map",
     "static/js/2.753528b5.chunk.js.LICENSE.txt": "/personalPortfolio/static/js/2.753528b5.chunk.js.LICENSE.txt",
     "static/js/mapbox-gl-csp-worker.e3fe5ef6.worker.js": "/personalPortfolio/static/js/mapbox-gl-csp-worker.e3fe5ef6.worker.js",
     "static/js/mapbox-gl-csp-worker.e3fe5ef6.worker.js.map": "/personalPortfolio/static/js/mapbox-gl-csp-worker.e3fe5ef6.worker.js.map"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.29847bab.js",
     "static/css/2.5facb513.chunk.css",
     "static/js/2.753528b5.chunk.js",
-    "static/css/main.0f4ad25e.chunk.css",
+    "static/css/main.99e17aac.chunk.css",
     "static/js/main.1acb9979.chunk.js"
   ]
 }
