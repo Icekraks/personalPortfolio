@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react';
-import './pageElements.scss'
+import '../../StyleSheets/pageElements.scss'
 import mainStore from "../../mainStore";
 import { ArrowLeftCircle } from "react-feather";
 

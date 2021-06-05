@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react';
-import '../HomePage/Home.scss';
+import '../../StyleSheets/Home.scss';
 import mainStore from "../../mainStore";
-import { felixData, rsTable } from '../../variables'
-import { Button, Input } from "reactstrap";
-import DataTable from "react-data-table-component";
+import { felixData } from '../../variables'
 import { Terminal, ChevronRight } from "react-feather";
+import { testAPI } from "../../api";
 
 
 const HomePage = observer(class HomePage extends Component {
@@ -76,9 +75,18 @@ const HomePage = observer(class HomePage extends Component {
 			case 4:
 				console.log('runescape');
 				break;
+			case 5:
+				console.log('HELLO IAM WORK IN PROGRESS');
+				// mainStore.setPageName('Login');
+				break;
 			default:
 				mainStore.setPageName('Home');
 		}
+	}
+
+	callApiTest = async ()=>{
+		let data = await testAPI('osrs');
+		console.log(data);
 	}
 
 
@@ -86,6 +94,7 @@ const HomePage = observer(class HomePage extends Component {
 		// let data = getStats('IcekraksIG');
 		this.setState({ loaded: true })
 		this.displayName('Felix Hu')
+
 	}
 
 
@@ -102,7 +111,7 @@ const HomePage = observer(class HomePage extends Component {
 			<div className='homeBody'>
 				{visible ? null :
 					<div className={'ee'}>
-						<Terminal className={'terminalIcon'}/>
+						<Terminal className={'terminalIcon'} onClick={()=>this.swapPage(5)}/>
 					</div>
 				}
 				<div>

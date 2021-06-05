@@ -12,6 +12,7 @@ class mainStore{
     name = "Felix Hu";
     tableStats = { };
     pageName = 'Home'
+    token = null;
 
     setUserName(details){
         this.userName = details;

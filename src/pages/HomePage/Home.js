@@ -3,7 +3,6 @@ import { observer } from 'mobx-react';
 import '../../App.css';
 import mainStore from "../../mainStore";
 import Pages from "../PageElements/Pages";
-import { Terminal } from "react-feather";
 
 
 
@@ -20,9 +19,12 @@ const Home = observer(class Home extends Component {
 		return (
 			<div className='BodyElement'>
 
-				{/*{mainPage}*/}
-				{mainStore.pageName === 'Video' ? (<Pages.Video/>) : mainStore.pageName === 'AboutMe' ? (
-					<Pages.AboutMe/>) : mainStore.pageName === 'Github' ? (<Pages.Github/>) : (<Pages.Home/>)}
+				{mainStore.pageName === 'Video' ?
+					(<Pages.Video/>) : mainStore.pageName === 'AboutMe' ?
+						(<Pages.AboutMe/>) : mainStore.pageName === 'Github' ?
+							(<Pages.Github/>) : mainStore.pageName==='Login' ?
+								(<Pages.Login/>) : mainStore.pageName==='CMSPage'?
+									(<Pages.CMSPage/>):(<Pages.Home/>)}
 			</div>
 
 		)
