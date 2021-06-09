@@ -28,7 +28,7 @@ export const rsTable = [
 		sortable: true,
 		minWidth: '12em'
 	}
-]
+];
 
 export const coordinateTable = [
 	{
@@ -82,7 +82,7 @@ export const coordinateTable = [
 		coordinate: [151.1950529,-33.8884706],
 		link:'https://www.youtube.com/embed/zkXsZZUtjCs'
 	},
-]
+];
 
 
 

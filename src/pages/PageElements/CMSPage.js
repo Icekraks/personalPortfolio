@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react';
-import {Button} from 'reactstrap';
+import { Button, Dropdown, DropdownItem } from 'reactstrap';
 import mainStore from "../../mainStore";
 import '../../StyleSheets/pageElements.scss';
 import '../../StyleSheets/CMS.scss';
@@ -35,14 +35,20 @@ const LoginPage = observer(class LoginPage extends Component {
 		return(
 			<div className='cmsBody'>
 				<div id={'cmsChild'} className={'cmsChild'}>
-					{/*<div className={'auxNavigation'}>*/}
-					{/*	<div className={'auxButton'}>*/}
-					{/*		<h1 onClick={() => mainStore.setPageName('Home')} className={'navigationH1'}>*/}
-					{/*			<ArrowLeftCircle className={'ArrowCircle'}/>Back</h1>*/}
-					{/*	</div>*/}
-					{/*</div>*/}
 					<div className={'cmsNavBar'}>
 						hi Iam the nav Bar
+						<Button className={'navBarButton'} onClick={()=>mainStore.setPageName('Home')}>
+							{'Home Page'}
+						</Button>
+						<Button className={'navBarButton'} onClick={()=>mainStore.setPageName('AboutMe')}>
+							{'About Me Page'}
+						</Button>
+						<Button className={'navBarButton'} onClick={()=>mainStore.setPageName('Video')}>
+							{'Videos Page'}
+						</Button>
+						<Button className={'navBarButton'}>
+							{'Video List'}
+						</Button>
 						{
 							[...Array(10)].map((x,i)=>(
 								<Button className={'navBarButton'}>

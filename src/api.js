@@ -19,15 +19,18 @@ const callApi = async (path, method, body) => {
 		method,
 		mode: 'no-cors',
 		headers: {
-			'Content-Type': 'application/json'
+			'app-version':'web'
 		}
 	};
 	if (method.toLowerCase() !== 'get') {
 		options.body = JSON.stringify(body);
 	}
 	let res;
+	console.log(options);
 	try {
-		res = await fetch(`${API_BASE_URL}${path}`, options).then(res => res.json());
+		//.then causing the issue
+		res = await fetch(`${API_BASE_URL}${path}`, options).then(res=>res.json());
+		console.log(res);
 	} catch (e) {
 		debug && console.error(e);
 		// toast.error('An unexpected error occurred');
@@ -40,6 +43,16 @@ const callApi = async (path, method, body) => {
 	return res;
 };
 
+export async function testAPI(path){
+	const res = await callApi(path, 'GET',null);
+	if (res instanceof Error) {
+		toast.error(res.message);
+		return null;
+	}
+
+	return res;
+}
+
 export async function getStats(name) {
 	const res = await callApi(name, 'GET', null);
 	if (res instanceof Error) {
@@ -49,14 +62,7 @@ export async function getStats(name) {
 	return res;
 }
 
-export async function testAPI(path){
-	const res = await callApi(path, 'GET', null);
-	if (res instanceof Error) {
-		toast.error(res.message);
-		return null;
-	}
-	return res;
-}
+
 
 export async function signIn(username,password){
 	const res = 'token';

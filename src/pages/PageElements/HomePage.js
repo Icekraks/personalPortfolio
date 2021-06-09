@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import '../../StyleSheets/Home.scss';
 import mainStore from "../../mainStore";
 import { felixData } from '../../variables'
-import { Terminal, ChevronRight } from "react-feather";
+import { Terminal, ChevronRight, Frown } from "react-feather";
 import { testAPI } from "../../api";
 
 
@@ -15,6 +15,13 @@ const HomePage = observer(class HomePage extends Component {
 			loaded: false,
 			pageName: 'Home',
 		}
+	}
+
+	async componentDidMount() {
+		// let data = getStats('IcekraksIG');
+		this.setState({ loaded: true })
+		this.displayName('Felix Hu')
+
 	}
 
 	displayName = (displayName) => {
@@ -76,8 +83,8 @@ const HomePage = observer(class HomePage extends Component {
 				console.log('runescape');
 				break;
 			case 5:
-				console.log('HELLO IAM WORK IN PROGRESS');
-				// mainStore.setPageName('Login');
+				// console.log('HELLO IAM WORK IN PROGRESS');
+				mainStore.setPageName('Login');
 				break;
 			default:
 				mainStore.setPageName('Home');
@@ -85,17 +92,12 @@ const HomePage = observer(class HomePage extends Component {
 	}
 
 	callApiTest = async ()=>{
-		let data = await testAPI('osrs');
+		let data = await testAPI('videos');
 		console.log(data);
 	}
 
 
-	async componentDidMount() {
-		// let data = getStats('IcekraksIG');
-		this.setState({ loaded: true })
-		this.displayName('Felix Hu')
 
-	}
 
 
 	render() {
@@ -112,7 +114,9 @@ const HomePage = observer(class HomePage extends Component {
 				{visible ? null :
 					<div className={'ee'}>
 						<Terminal className={'terminalIcon'} onClick={()=>this.swapPage(5)}/>
+						<Frown className={'terminalIcon'} onClick={()=>this.callApiTest()}/>
 					</div>
+
 				}
 				<div>
 
