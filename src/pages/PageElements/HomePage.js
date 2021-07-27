@@ -4,7 +4,7 @@ import '../../StyleSheets/Home.scss';
 import mainStore from "../../mainStore";
 import { felixData } from '../../variables'
 import { Terminal, ChevronRight, Frown } from "react-feather";
-import { testAPI } from "../../api";
+import { getAllUsers, testAPI } from "../../api";
 
 
 const HomePage = observer(class HomePage extends Component {
@@ -21,7 +21,8 @@ const HomePage = observer(class HomePage extends Component {
 		// let data = getStats('IcekraksIG');
 		this.setState({ loaded: true })
 		this.displayName('Felix Hu')
-
+		// let users = await getAllUsers();
+		// console.log(users);
 	}
 
 	displayName = (displayName) => {

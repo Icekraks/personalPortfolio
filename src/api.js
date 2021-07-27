@@ -4,7 +4,7 @@ import mainStore from "./mainStore";
 
 
 export const API_BASE_URL = 'http://localhost:8080/',
-	debug = process.env.REACT_APP_DEBUG === 'true';
+	debug = 'true';
 
 export function getLocalToken(){
 	return localStorage.getItem('IcekraksBlog:credentials');
@@ -17,7 +17,6 @@ export function setLocalToken(token){
 const callApi = async (path, method, body) => {
 	let options = {
 		method,
-		mode: 'no-cors',
 		headers: {
 			'app-version':'web'
 		}
@@ -30,7 +29,6 @@ const callApi = async (path, method, body) => {
 	try {
 		//.then causing the issue
 		res = await fetch(`${API_BASE_URL}${path}`, options).then(res=>res.json());
-		console.log(res);
 	} catch (e) {
 		debug && console.error(e);
 		// toast.error('An unexpected error occurred');
@@ -55,6 +53,15 @@ export async function testAPI(path){
 
 export async function getStats(name) {
 	const res = await callApi(name, 'GET', null);
+	if (res instanceof Error) {
+		toast.error(res.message);
+		return null;
+	}
+	return res;
+}
+
+export async function getAllUsers(){
+	const res = await callApi("allUser", 'GET', null);
 	if (res instanceof Error) {
 		toast.error(res.message);
 		return null;
