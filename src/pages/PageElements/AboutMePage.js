@@ -19,7 +19,7 @@ const AboutMePage = observer(class AboutMePage extends Component {
 						<div className={'auxTitle'}>About Me</div>
 						<div className={'paragraphBlockText'}>
 							<p className={'paragraph'}>
-								I am a 23 year old male that graduated from the University of Sydney with a <b>Bachelor
+								I am a 24 year old male that graduated from the University of Sydney with a <b>Bachelor
 								of Computer Science</b> in 2019.
 							</p>
 							<p className={'paragraph'}>I spent a year working in 2020 during COVID working at a company

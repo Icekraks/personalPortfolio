@@ -21,6 +21,9 @@ const HomePage = observer(class HomePage extends Component {
 		// let data = getStats('IcekraksIG');
 		this.setState({ loaded: true })
 		this.displayName('Felix Hu')
+		setTimeout(()=>{
+			this.closeName();
+		},10000)
 		// let users = await getAllUsers();
 		// console.log(users);
 	}
@@ -37,10 +40,11 @@ const HomePage = observer(class HomePage extends Component {
 
 	closeName = () => {
 		const { visible } = this.state;
-		this.setState({
-			visible: false,
-		})
+
 		if (visible === true) {
+			this.setState({
+				visible: false,
+			})
 			this.displayString(felixData);
 		}
 
@@ -78,7 +82,7 @@ const HomePage = observer(class HomePage extends Component {
 				mainStore.setPageName('Video');
 				break;
 			case 3:
-			 	window.open('https://github.com/Icekraks', '_blank');
+				window.open('https://github.com/Icekraks', '_blank');
 				break;
 			case 4:
 				console.log('runescape');
@@ -114,21 +118,27 @@ const HomePage = observer(class HomePage extends Component {
 			<div className='homeBody'>
 				{visible ? null :
 					<div className={'ee'}>
-						<Terminal className={'terminalIcon'} onClick={()=>this.swapPage(5)}/>
-						<Frown className={'terminalIcon'} onClick={()=>this.callApiTest()}/>
+						<Terminal className={'terminalIcon'}
+								  // onClick={()=>this.swapPage(5)}
+						/>
+						{/*<Frown className={'terminalIcon'} onClick={()=>this.callApiTest()}/>*/}
 					</div>
 
 				}
-				<div>
-
-					<span id='textBlock'
-						  className={visible ? 'textBlock' : 'fadeOut'}>
+				<div className={visible ? 'LandingPage' : 'fadeOut'}>
+					<div className={'OverlayTitle'}>
+						<span id='textBlock'
+							   className={'textBlock'}>
 						<ChevronRight className={ 'chevronRight, titleChevron'}/>
 						{mainStore.userName}
 						<div style={{ padding: '5px', display: 'inline' }}>
 							<div id="cursor" style={{ display: 'inline' }}/>
 						</div>
 					</span>
+					</div>
+					<div id={'hint'} className={'hint'}>
+						Click On My Name
+					</div>
 				</div>
 				<div className={visible ? 'mainElementsHidden' : 'mainElements'}>
 					<div className={'mainRow'}>
@@ -138,7 +148,7 @@ const HomePage = observer(class HomePage extends Component {
 							</div>
 							<div className={'paragraphBlock'}>
 								<p className={'paragraph'}>
-									I am a 23 year old male that graduated from the University of Sydney with a <b>Bachelor
+									I am a 24 year old male that graduated from the University of Sydney with a <b>Bachelor
 									of Computer Science</b> in 2019.
 								</p>
 								<p className={'paragraph'}>I spent a year working in 2020 during Covid working at a
@@ -169,13 +179,13 @@ const HomePage = observer(class HomePage extends Component {
 									<ChevronRight className={ 'chevronRight'}/>{mainStore.title3}</h1>
 							</div>
 							<div className={'paragraphBlock'}>
-							<div className={'youtubeEmbed'}>
-								<iframe title={'showreelvideo'} id={'showreel'} width="100%" height="100%"
-										src="https://www.youtube.com/embed/IZEM1jpcEhY"
-										frameBorder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-										allowFullScreen/>
-							</div>
+								<div className={'youtubeEmbed'}>
+									<iframe title={'showreelvideo'} id={'showreel'} width="100%" height="100%"
+											src="https://www.youtube.com/embed/IZEM1jpcEhY"
+											frameBorder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowFullScreen/>
+								</div>
 							</div>
 						</div>
 						<div className={'mainQuadrant'}>

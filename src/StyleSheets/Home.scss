@@ -6,10 +6,39 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  .LandingPage {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    .OverlayTitle {
+      display: flex;
+      cursor: pointer;
+      border: 2px #859900 solid;
+      border-radius: 50px;
+      padding: 10px 30px 10px;
+      margin-bottom: 10px;
 
+    }
+    .OverlayTitle:hover {
+      cursor: pointer;
+      border: 2px #b58900 solid;
+      border-radius: 50px;
+      padding: 10px 30px 10px;
+    }
+    .hint{
+      display: none;
+      color: #FF0050;
+    }
+  }
   .chevronRight{
     color: #b58900;
     padding-right: 5px;
+  }
+  .chevronRight:hover{
+    color: #859900;
   }
 
   .ee {
@@ -44,6 +73,11 @@
     height: 60px;
     width: 60px;
   }
+  .titleChevron:hover{
+    color: #859900;
+    height: 60px;
+    width: 60px;
+  }
   .decodeButton{
     width: 100px;
     height: 50px;
@@ -62,6 +96,9 @@
     color: #859900;
     align-items: center;
 
+  }
+  .textBlock:hover {
+    color: #b58900;
   }
 
   .fadeOut{
@@ -100,7 +137,8 @@
           margin: 0 0 20px;
           align-items: center;
           justify-content: center;
-
+          border-radius: 50px;
+          border: 2px #859900 solid;
 
           .navigationH1{
             margin: 0;
@@ -108,9 +146,11 @@
           }
         }
         .titleButton:hover{
-          padding: 5px 20px 5px;
+          padding: 7px 22px 7px;
           border-radius: 50px;
           border: 2px solid #b58900;
+          background-color: #586e75;
+          color: #b58900;
           .navigationH1:hover{
             color: #b58900;
           }
