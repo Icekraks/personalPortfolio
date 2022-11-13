@@ -1,0 +1,15 @@
+h1 {
+  @include t-font--heading-1;
+}
+
+h2 {
+  @include t-font--heading-2;
+}
+
+h3 {
+  @include t-font--heading-3;
+}
+
+h4 {
+  @include t-font--heading-4;
+}

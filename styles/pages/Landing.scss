@@ -19,7 +19,8 @@
     min-height: 2.5rem;
     text-align: left;
     padding-left: 1rem;
-    
+    margin-bottom: 2rem;
+
     &::after{
       content:'|';
       color: $s-color--text;

@@ -5,7 +5,16 @@
 
 
 //Elements
+@import './elements/a.scss';
+@import './elements/all.scss';
 @import './elements/button.scss';
+@import './elements/headings.scss';
+@import './elements/image.scss';
+@import './elements/input.scss';
+@import './elements/paragraph.scss';
+@import './elements/strong.scss';
+@import './elements/table.scss';
+
 
 //Objects
 @import './objects/button.scss';
