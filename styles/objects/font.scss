@@ -1,0 +1,33 @@
+/*
+ *  Typography Objects
+ *    Use these to control the font styling of elements based on a class.
+ *
+ *  Version:
+ *    1.0.0 - 2021/12/01
+ */
+
+
+//=== Default Type Styles ===//
+
+.o-type--1 {
+  @include t-font--type-1;
+}
+
+
+//=== Heading Type Styles ===//
+
+.o-heading--1 {
+  @include t-font--heading-1;
+}
+
+.o-heading--2 {
+  @include t-font--heading-2;
+}
+
+.o-heading--3 {
+  @include t-font--heading-3;
+}
+
+.o-heading--4 {
+  @include t-font--heading-4;
+}

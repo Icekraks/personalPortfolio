@@ -1,0 +1,33 @@
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+.c-landing-page{
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $s-color--background;
+  &__inner{
+   text-align: center;
+  }
+
+  &__title{
+    min-height: 2.5rem;
+    text-align: left;
+    padding-left: 1rem;
+    
+    &::after{
+      content:'|';
+      color: $s-color--text;
+      animation: cursor-blink 1.5s steps(2) infinite;
+    }
+
+    &.is-gold{
+      color: $s-color--text-highlight;
+    }
+  }
+}

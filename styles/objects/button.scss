@@ -1,0 +1,29 @@
+.o-button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  color: $s-color--text;
+  border-radius: 1.25rem;
+  border: 1px solid $s-color--border;
+
+  &:hover{
+    color: $s-color--text-highlight;
+    border: 1px solid $s-color--border-hover;
+  }
+  &:active{
+    color: $s-color--text-highlight;
+    border: 1px solid $s-color--border-alt;
+  }
+
+  &.is-disabled,&:disabled{
+    cursor: default;
+    color: $s-color--border-50;
+    border: 1px solid $s-color--border-50;
+  }
+
+  &.is-inverted,
+  .is-dark & {
+    color: $s-color--text-invert;
+  }
+}

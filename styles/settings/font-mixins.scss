@@ -1,0 +1,164 @@
+@mixin t-font--type-base{
+  font-weight: $s-font--root-weight;
+  font-family: $s-font--root-family;
+  line-height: $s-font--root-line;
+}
+
+//=== Standard paragraphs & typography ===//
+@mixin t-font--type-1 {
+  @include t-font--type-base;
+  font-size: 1rem;
+
+  @include t-media-query($s-medium-up) {
+    font-size: 1.25rem;
+    line-height: 1.455;
+  }
+
+  @include t-media-query($s-xlarge-up) {
+    font-size: min(1vw, 1.25rem);
+  }
+}
+
+@mixin t-font--type-2 {
+  @include t-font--type-base;
+  font-size: 1rem;
+
+  @include t-media-query($s-medium-up) {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  @include t-media-query($s-xlarge-up) {
+    font-size: min(0.8vw, 1rem);
+  }
+}
+
+@mixin t-font--type-3 {
+  @include t-font--type-base;
+  font-size: 1rem;
+
+  @include t-media-query($s-medium-up) {
+    line-height: 1.75;
+  }
+
+  @include t-media-query($s-xlarge-up) {
+    font-size: min(0.8vw, 1rem);
+  }
+}
+
+@mixin t-font--type-4 {
+  @include t-font--type-base;
+  font-size: 1rem;
+  font-weight: $s-font--weight-regular;
+
+  @include t-media-query($s-medium-up) {
+    line-height: 1.75;
+  }
+
+  @include t-media-query($s-xlarge-up) {
+    font-size: min(0.8vw, 1rem);
+  }
+}
+
+/ Base heading styles
+@mixin t-font--heading {
+  margin: 0;
+  font-family: $s-font--heading-family;
+  font-weight: $s-font--weight-regular;
+  letter-spacing: -0.02rem;
+}
+
+@mixin t-font--heading-alt {
+  margin: 0;
+  font-family: $s-font--heading-family-alt;
+  font-weight: $s-font--weight-semi-bold;
+  letter-spacing: -0.02rem;
+}
+
+@mixin t-font--heading-1 {
+  @include t-font--heading;
+  font-size: 3.625rem;
+  line-height: 1.1;
+
+
+  @include t-media-query($s-medium-up) {
+    font-size: min(9vw,11.25rem);
+    line-height: 1.089;
+  }
+}
+
+@mixin t-font--heading-2 {
+  @include t-font--heading;
+  font-size: 3rem;
+  line-height: 1.167;
+  
+  @include t-media-query($s-medium-up) {
+    line-height: 1.125;
+    font-size: min(6.4vw,8rem);
+  }
+}
+@mixin t-font--heading-3 {
+  @include t-font--heading;
+  font-size: 2rem;
+  line-height: 1.125;
+
+  @include t-media-query($s-medium-up) {
+    font-size: min(4.500vw,5.625rem);
+    line-height: 1.156;
+  }
+}
+@mixin t-font--heading-4 {
+  @include t-font--heading;
+  font-size: 2rem;
+  line-height: 1.125;
+  @include t-media-query($s-medium-up) {
+    font-size: min(3.200vw,4rem);
+    line-height: 1.125;
+  }
+}
+@mixin t-font--heading-5 {
+  @include t-font--heading-alt;
+  font-size: 2rem;
+  line-height: 1.125;
+  letter-spacing: 0.01rem;
+  @include t-media-query($s-medium-up) {
+    font-size: min(3.200vw,4rem);
+    line-height: 1;
+    letter-spacing: 0.01rem;
+  }
+}
+@mixin t-font--heading-6 {
+  @include t-font--heading-alt;
+  font-size: 2rem;
+  line-height: 1.125;
+  letter-spacing: 0.01rem;
+  @include t-media-query($s-medium-up) {
+    font-size: min(2.250vw ,2.813rem);
+    line-height: 1.244;
+    letter-spacing: 0.01rem;
+  }
+}
+
+@mixin t-font--heading-7 {
+  @include t-font--heading;
+  font-size: 1.75rem;
+  line-height: 1.143;
+  letter-spacing: 0;
+  @include t-media-query($s-medium-up) {
+    font-size: min(2.250vw,2.813rem);
+    line-height: 1.333;
+    letter-spacing: 0;
+  }
+}
+
+@mixin t-font--heading-8 {
+  @include t-font--heading-alt;
+  font-size: 1.375rem;
+  line-height: 1.455;
+  letter-spacing: 0.01rem;
+  @include t-media-query($s-medium-up) {
+    font-size: 2.25rem;
+    line-height: 1.333;
+    letter-spacing: 0.01rem;
+  }
+}
